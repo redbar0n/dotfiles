@@ -34,6 +34,7 @@
   d = diff -b
   dw = diff -b --word-diff=color
   c = commit -m
+  ca = commit -am
 [merge]
   tool = opendiff
 [filter "tabspace"]
