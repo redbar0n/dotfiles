@@ -1,0 +1,64 @@
+color jellybeans+
+
+" Vim behaviour
+set nobackup                    " do not keep backup files, it's 70's style cluttering
+set noswapfile                  " do not write annoying intermediate swap files
+set visualbell                  " don't beep
+set noerrorbells                " don't beep
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Easy tab navigation
+nnoremap <silent> <C-Left> :tabprevious<CR>
+nnoremap <silent> <C-Right> :tabnext<CR>
+
+" Show hidden files
+let NERDTreeShowHidden=1
+
+" disable arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
+" Press Space to dismiss highlighting
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" Open this file in a vertically split window
+nnoremap <leader>ev <C-w><C-v><C-l>:e ~/.vimrc.local<cr>
+
+" Re-hardwrap paragraphs of text
+nnoremap <leader>q gqip
+
+" Create Blank Newlines and stay in Normal mode
+nnoremap <silent> zj o<Esc>
+nnoremap <silent> zk O<Esc>j
+
+" Testing out a new thing with my braces, cause this is what I often do
+inoremap '' ''<Esc>i
+inoremap "" ""<Esc>i
+inoremap () ()<Esc>i
+inoremap <> <><Esc>i
+inoremap {} {}<Esc>i
+inoremap [] []<Esc>i
+inoremap () ()<Esc>i
+
+" Get LaTeX properly up and running
+function s:setupLatexWrapping()
+  set wrap
+  set wm=2
+  set textwidth=80
+
+  " Rubbr
+  map <Leader>r :!rubbr -Fd<CR>
+endfunction
+
+au BufRead,BufNewFile *.{tex,bib,cls} call s:setupLatexWrapping()

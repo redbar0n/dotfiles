@@ -1,0 +1,17 @@
+" Scrollbars off
+set guioptions=aAce
+
+" Default gui color scheme
+color jellybeans+
+
+" Font
+set guifont=Menlo:h11
+
+" Highlight the current line
+set cursorline
+
+" Color on statuslines
+hi  VertSplit    guibg=#222222
+hi  StatusLine   guibg=#ff6600 guifg=#000000
+hi  StatusLineNC guibg=#222222 guifg=#999999
+

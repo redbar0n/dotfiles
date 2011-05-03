@@ -1,0 +1,8 @@
+--type-add=markdown=.md,.mdown,.markdown
+--type-add=css=.scss
+--type-add=html=.haml
+
+--ignore-dir=tmp
+
+--ignore-case
+--smart-case
