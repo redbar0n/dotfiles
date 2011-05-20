@@ -23,7 +23,8 @@
   pu = push origin master
   up = pull --rebase
   reb = rebase
-  l = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen%cr%Creset' --abbrev-commit --date=relative
+  l  = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen%cr%Creset' --abbrev-commit --date=relative -n 15
+  ll = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen%cr%Creset' --abbrev-commit --date=relative
   lg = log --pretty='tformat:%Cred%h%Creset %C(yellow)%an%Creset (%Cgreen%ar%Creset) %s'
   rank = shortlog -s -n --no-merges
   undo = reset --soft HEAD^
