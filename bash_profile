@@ -29,12 +29,19 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="/usr/local/Cellar/python/2.7.1/bin:$PATH"
 
 # Functions
-parse_git_branch() {
+ps1_git() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/:\1/'
 }
 
+ps1_rvm() {
+  branch=$(git symbolic-ref -q HEAD 2>/dev/null) || return 0
+  if [ -n "${branch}" ]
+    then command -v rvm-prompt >/dev/null 2>&1 && printf ":%s" "$(rvm-prompt) "
+  fi
+}
+
 # Custom promt
-PS1="\\e[1;32m\w\\e[0;31m\$(parse_git_branch)\\e[0m › "
+PS1="\\e[1;32m\w\\e[0;31m\$(ps1_git)\\e[1;36m\$(ps1_rvm)\n\\e[0m› "
 PS2="\\e[0m› "
 
 # Completions
