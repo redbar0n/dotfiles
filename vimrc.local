@@ -62,3 +62,6 @@ function s:setupLatexWrapping()
 endfunction
 
 au BufRead,BufNewFile *.{tex,bib,cls} call s:setupLatexWrapping()
+
+" Guardfile is Ruby
+au BufRead,BufNewFile {Guardfile} set ft=ruby
