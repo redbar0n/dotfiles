@@ -4,18 +4,14 @@ require 'open-uri'
 require 'json'
 require 'cgi'
 
+require 'rubygems' unless defined? Gem
+require 'wirb'
+Wirb.start
+
 ANSI_YELLOW   = "\e[33m"
 ANSI_PURPLE   = "\033[35m"
 ANSI_RESET    = "\033[0m"
 ANSI_BOLD     = "\e[1m"
-
-# begin
-#   require 'wirble'
-#   Wirble.init
-#   Wirble.colorize
-# rescue LoadError => err
-#   warn "Couldn't load Wirble: #{err}"
-# end
 
 ARGV.concat [ "--readline", "--prompt-mode" ]
 IRB.conf[:SAVE_HISTORY] = 100
