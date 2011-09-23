@@ -29,6 +29,7 @@ export EDITOR="mvim"
 
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH="/usr/local/Cellar/python/2.7.1/bin:$PATH"
+export NODE_PATH="/usr/local/lib/node_modules"
 
 # Functions
 ps1_git() {
