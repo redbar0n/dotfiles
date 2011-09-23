@@ -10,6 +10,9 @@ set guifont=Menlo:h11
 " Highlight the current line
 set cursorline
 
+" Set default window size
+set lines=60 columns=190
+
 " Color on statuslines
 hi  VertSplit    guibg=#222222
 hi  StatusLine   guibg=#ff6600 guifg=#000000
