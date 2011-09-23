@@ -20,6 +20,8 @@ alias es='ssh -p 1411 kimjoar@es.chrismas.no'
 alias startmysql='/usr/local/Cellar/mysql/5.1.47/share/mysql/mysql.server start'
 alias stopmysql='/usr/local/Cellar/mysql/5.1.47/share/mysql/mysql.server stop'
 
+alias s='open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app'
+
 # Exports
 export GREP_OPTIONS="--color=auto"
 export CLICOLOR=1
