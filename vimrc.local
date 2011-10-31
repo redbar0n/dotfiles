@@ -65,3 +65,14 @@ au BufRead,BufNewFile *.{tex,bib,cls} call s:setupLatexWrapping()
 
 " Guardfile is Ruby
 au BufRead,BufNewFile {Guardfile} set ft=ruby
+
+" Removes trailing spaces
+function TrimWhiteSpace()
+  %s/\s*$//
+  ''
+:endfunction
+
+autocmd FileWritePre * :call TrimWhiteSpace()
+autocmd FileAppendPre * :call TrimWhiteSpace()
+autocmd FilterWritePre * :call TrimWhiteSpace()
+autocmd BufWritePre * :call TrimWhiteSpace()
