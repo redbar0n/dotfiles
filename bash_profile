@@ -52,3 +52,6 @@ PS2="\\e[0m› "
 
 # Load RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# Load Amazon keys
+[[ -f "$HOME/.amazon_keys" ]] && . "$HOME/.amazon_keys";
