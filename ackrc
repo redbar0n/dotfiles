@@ -4,5 +4,4 @@
 
 --ignore-dir=tmp
 
---ignore-case
 --smart-case
