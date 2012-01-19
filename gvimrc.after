@@ -2,7 +2,7 @@
 set guioptions=aAce
 
 " Default gui color scheme
-color jellybeans+
+color jellybeans
 
 " Font
 set guifont=Menlo:h11

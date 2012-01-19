@@ -1,4 +1,4 @@
-color jellybeans+
+color jellybeans
 
 " Vim behaviour
 set nobackup                    " do not keep backup files, it's 70's style cluttering
