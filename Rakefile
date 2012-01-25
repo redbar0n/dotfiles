@@ -9,18 +9,6 @@ task :link do
   DotFile.symlink!
 end
 
-desc "Info on cmd colors"
-task :colors do
-  info "Snow Leopard:"
-  info "  Set the Terminal app to 32-bit in Get Info"
-  info "  Install SIMBL: http://www.culater.net/software/SIMBL/SIMBL.php"
-  info "  Download the terminal colors: https://github.com/downloads/evanphx/terminalcolours/TerminalColours-SL.tar.gz"
-  info "  Download http://www.infinitered.com/settings/IR_Black.terminal.zip, double click and set as default"
-  info "Lion:"
-  info "  Download http://blog.toddwerth.com/entry_files/13/IR_Black.terminal.zip and install"
-
-end
-
 class DotFile
   class << self
     # Files in to ignore when symlinking.
