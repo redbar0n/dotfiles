@@ -22,6 +22,8 @@ alias stopmysql='/usr/local/Cellar/mysql/5.1.47/share/mysql/mysql.server stop'
 
 alias s='open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app'
 
+type hub &>/dev/null && alias git=hub
+
 # Exports
 export GREP_OPTIONS="--color=auto"
 export CLICOLOR=1
