@@ -1,5 +1,7 @@
 My dots.
 
-To install:
+Install
+-------
 
-    make install
+    git clone git@github.com:kjbekkelund/dotfiles.git
+    cd dotfiles && make install
