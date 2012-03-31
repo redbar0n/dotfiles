@@ -12,4 +12,4 @@ replace = @[ -e ~/.$(2) ] \
 .gitconfig:
 	$(call replace,gitconfig,github-token)
 
-.PHONY: install gitconfig
+.PHONY: install
