@@ -1,13 +1,15 @@
-install: .ackrc .irbrc .bash_profile .gemrc .gitignore .tmux.conf .rspec gitconfig
+all: install
+
+install: .ackrc .irbrc .bash_profile .gemrc .gitignore .tmux.conf .rspec .gitconfig
 
 .%: %
 	ln -fs $(abspath $<) ~/$@
 
-replace = @[ -e ~/.$(1) ] \
-	&& (sed s/\<$(1)\>/`cat ~/.$(1)`/ $(2) > ~/.$(2) && echo ".$(2) installed") \
-	|| echo "~/.$(1) is missing. $(2) not installed."
+replace = @[ -e ~/.$(2) ] \
+	&& (sed s/\<$(2)\>/`cat ~/.$(2)`/ $(1) > ~/.$(1) && echo ".$(1) installed") \
+	|| echo "~/.$(2) is missing. $(1) not installed."
 
-gitconfig:
-	$(call replace,github-token,gitconfig)
+.gitconfig:
+	$(call replace,gitconfig,github-token)
 
 .PHONY: install gitconfig

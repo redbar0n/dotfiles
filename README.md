@@ -4,4 +4,4 @@ Install
 -------
 
     git clone git@github.com:kjbekkelund/dotfiles.git
-    cd dotfiles && make install
+    cd dotfiles && make
