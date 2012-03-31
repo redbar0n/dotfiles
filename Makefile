@@ -3,9 +3,11 @@ install: .ackrc .irbrc .bash_profile .gemrc .gitignore .tmux.conf .rspec gitconf
 .%: %
 	ln -fs $(abspath $<) ~/$@
 
+replace = @[ -e ~/.$(1) ] \
+	&& (sed s/\<$(1)\>/`cat ~/.$(1)`/ $(2) > ~/.$(2) && echo ".$(2) installed") \
+	|| echo "~/.$(1) is missing. $(2) not installed."
+
 gitconfig:
-	@[ -e ~/.github-token ] \
-		&& (sed s/\<github-token\>/`cat ~/.github-token`/ $@ > ~/.$@ && echo ".$@ installed") \
-		|| echo "~/.github-token is missing. $@ not installed."
+	$(call replace,github-token,gitconfig)
 
 .PHONY: install gitconfig
