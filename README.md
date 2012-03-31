@@ -1,5 +1,5 @@
 My dots.
 
-There is one command:
+To install:
 
-    rake link  # Symlink dotfiles to home dir
+    make install

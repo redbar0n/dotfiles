@@ -3,7 +3,7 @@
   email = kjbekkelund@gmail.com
 [github]
   user = kjbekkelund
-  token = <.replace github-token>
+  token = <github-token>
 [help]
   format = web
 [color]
