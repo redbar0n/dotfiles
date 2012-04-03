@@ -1,6 +1,6 @@
 all: install
 
-install: .ackrc .irbrc .bash_profile .gemrc .gitignore .tmux.conf .rspec .gitconfig
+install: update .ackrc .irbrc .bash_profile .gemrc .gitignore .tmux.conf .rspec .gitconfig
 
 .%: %
 	ln -fs $(abspath $<) ~/$@
@@ -12,4 +12,7 @@ replace = @[ -e ~/.$(2) ] \
 .gitconfig:
 	$(call replace,gitconfig,github-token)
 
-.PHONY: install
+update:
+	git pull origin master
+
+.PHONY: install update
