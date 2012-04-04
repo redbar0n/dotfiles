@@ -1,7 +1,7 @@
 # Aliases
 alias ls='ls -FG'
-alias l='ls -a'
-alias ll='ls -al'
+alias l='ls -A'
+alias ll='ls -Al'
 
 alias r='rails'
 alias b='bundle exec'
