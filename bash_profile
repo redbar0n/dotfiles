@@ -13,6 +13,8 @@ alias c="clear"
 alias m="mvim"
 alias o="open"
 
+alias p="pygmentize -f terminal -g"
+
 alias subsys='ssh kimjoar@server2.subsys.no'
 alias slice='ssh -p 30000 kim@67.23.12.65'
 alias es='ssh -p 1411 kimjoar@es.chrismas.no'
