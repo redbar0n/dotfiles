@@ -13,7 +13,7 @@
 [core]
   editor = mvim -f
   autocrlf = input
-  excludesfile = /Users/kimjoar/.gitignore
+  excludesfile = ~/.gitignore
   whitespace = tab-in-indent,blank-at-eof
 [alias]
   unstage = reset HEAD --

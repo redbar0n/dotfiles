@@ -21,6 +21,8 @@ alias es='ssh -p 1411 kimjoar@es.chrismas.no'
 
 alias s='open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app'
 
+alias server='python -m SimpleHTTPServer'
+
 type hub &>/dev/null && alias git=hub
 
 # Exports
@@ -34,7 +36,7 @@ export NODE_PATH="/usr/local/lib/node_modules"
 
 # Functions
 ps1_git() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/:\1/'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
 }
 
 ps1_rvm() {
@@ -45,7 +47,7 @@ ps1_rvm() {
 }
 
 # Custom promt
-PS1="\[\e[1;32m\]\w\[\e[0;31m\]\$(ps1_git)\[\e[1;36m\]\$(ps1_rvm)\n\[\e[0m›\] "
+PS1="\[\e[1;32m\]\w\[\e[0;31m\]\$(ps1_git)\n\[\e[0m›\] "
 PS2="\[\e[0m›\] "
 
 # Completions
