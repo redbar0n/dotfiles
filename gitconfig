@@ -11,7 +11,7 @@
 [log]
   date = relative
 [core]
-  editor = mvim -f
+  editor = slime
   autocrlf = input
   excludesfile = ~/.gitignore
   whitespace = tab-in-indent,blank-at-eof

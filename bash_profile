@@ -12,6 +12,7 @@ alias c="clear"
 
 alias m="mvim"
 alias o="open"
+alias slime='open -a /Applications/Sublime\ Text\ 3.app/'
 
 alias p="pygmentize -f terminal -g"
 
