@@ -48,7 +48,8 @@ ps1_rvm() {
 }
 
 # Custom promt
-PS1="\[\e[1;32m\]\w\[\e[0;31m\]\$(ps1_git)\n\[\e[0m›\] "
+PS1="\[\e[1;32m\]\w\[\e[0;31m\]\$(ps1_git)\n\[\e[0m\]› "
+
 PS2="\[\e[0m›\] "
 
 # Completions
